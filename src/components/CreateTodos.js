@@ -1,8 +1,10 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { Box, Button, FormControl, OutlinedInput } from '@mui/material';
+import { Box, Button, FormControl, useTheme, OutlinedInput } from '@mui/material';
 
 const CreateTodo = ({ handleSubmit }) => {
+  const theme = useTheme();
+
   return (
     <Formik
       initialValues={{ text: '' }}
@@ -23,7 +25,7 @@ const CreateTodo = ({ handleSubmit }) => {
                 value={values.text}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                sx={{ backgroundColor: 'white', borderRadius: 1 }}
+                sx={{ backgroundColor: 'white', borderRadius: 1, color: theme.dark ? "black" : "black" }}
               />
             </FormControl>
             <Button type="submit" variant="contained" color="primary" sx={{ ml: 2, height: '100%' }}>
