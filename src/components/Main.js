@@ -160,6 +160,7 @@ const Main = () => {
             overflowY: "auto",
             maxHeight: "50vh",
             mt: 2,
+            scrollbarWidth:'none'
           }}
         >
           {getTodos.isLoading ? (
@@ -257,7 +258,7 @@ const Main = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">OK</Button>
+          <Button type="submit" >OK</Button>
         </DialogActions>
       </Dialog>
       <Snackbar
